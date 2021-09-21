@@ -30,8 +30,9 @@ def index_of_alphabet(num)
 
   x = num
   while x > 26
+    tail = x%26
     x = x/26
-    tail = num%26
+    
     
     result << alphabet_hash.key(tail)
     result << alphabet_hash.key(x) if x < 26
