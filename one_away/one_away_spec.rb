@@ -7,6 +7,6 @@ describe 'One Away' do
   it "should return true" do expect(one_away('pale', 'bake')).to eq(false) end
 
   #addtl tests
-  it "should return true" do expect(one_away('pale', 'pale')).to eq(true) end
+  it "should return true" do expect(one_away('pale', 'pale')).to eq(false) end
   it "should return true" do expect(one_away('pale', 'plae')).to eq(false) end
 end
