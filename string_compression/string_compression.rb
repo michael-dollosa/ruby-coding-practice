@@ -7,8 +7,6 @@
 def string_compression(str)
   #remove non alphanumeric char
   word = str.gsub(/[^0-9a-z ]/i, '')
-  #var for checking if original string is compressed
-  is_compressed = true
   # store prev letter
   prev_letter = ""
   # arr for result
@@ -20,13 +18,11 @@ def string_compression(str)
     word_arr.concat("#{letter}1") if prev_letter != letter && letter != " "
     # since the last string is always a digit, increment by 1 if prev_letter is equals to letter, then overwrite (using bang)
     word_arr.next! if prev_letter == letter && letter != " "
-    # turn is_compressed boolean to false if any of the letters have increments
-    is_compressed = false if prev_letter == letter && letter != " "
     # save prev_letter for comparison for next iteration
     prev_letter = letter
   end
   
   # return
-  puts "compressed: #{is_compressed}, original: #{str}, compressed: #{word_arr}"
-  is_compressed ? str : word_arr
+  puts "compressed: #{is_compressed}, original: #{str.length}, compressed: #{word_arr.length}"
+  str.length < word_arr.length ? str : word_arr
 end
