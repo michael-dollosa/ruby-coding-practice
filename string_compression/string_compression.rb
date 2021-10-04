@@ -23,6 +23,6 @@ def string_compression(str)
   end
   
   # return
-  puts "compressed: #{is_compressed}, original: #{str.length}, compressed: #{word_arr.length}"
+  puts "original: #{str.length}, compressed: #{word_arr.length}"
   str.length < word_arr.length ? str : word_arr
 end

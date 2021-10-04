@@ -1,6 +1,6 @@
 require_relative './string_compression.rb'
 
-describe 'Palindrome Permutations' do
+describe 'String Compression' do
   #should return compressed string
   it "should return original string" do expect(string_compression('hello world')).to eq("hello world") end
   it "should return compressed string" do expect(string_compression('aabcccccaaa')).to eq("a2b1c5a3") end
