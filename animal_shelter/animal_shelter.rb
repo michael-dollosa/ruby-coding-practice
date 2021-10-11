@@ -4,6 +4,7 @@
 
 # FIFO
 class Queue
+
   def initialize
     @animals = []
     @count = 0
@@ -27,7 +28,6 @@ class Queue
       if arr[1] == "dog"
         @deleted = arr
         @animals.delete(arr)
-        p "deleted #{@deleted}"
         break
       end
     end
@@ -41,7 +41,6 @@ class Queue
       if arr[1] == "cat"
         @deleted = arr
         @animals.delete(arr)
-        p "deleted #{@deleted}"
         break
       end
     end
@@ -55,4 +54,5 @@ class Queue
   def length
     @animals.length
   end
+
 end
